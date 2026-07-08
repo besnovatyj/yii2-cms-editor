@@ -11,7 +11,6 @@ namespace Besnovatyj\Editor;
 use Besnovatyj\Editor\contracts\EditorAdapterInterface;
 use Yii;
 use yii\base\InvalidConfigException;
-use yii\base\Widget;
 use yii\bootstrap5\InputWidget;
 use yii\helpers\ArrayHelper;
 
@@ -97,7 +96,6 @@ class EditorWidget extends InputWidget
             $this->engineConfig[$engine] ?? [],
         );
 
-        $config['class']   = $adapter->widgetClass();
         $config['options'] = ArrayHelper::merge($config['options'] ?? [], $this->options);
 
         // Прокидываем привязку к данным ровно так, как её получил сам фасад.
@@ -109,7 +107,13 @@ class EditorWidget extends InputWidget
             $config['value'] = $this->value;
         }
 
-        return Widget::widget($config);
+        // Делегируем рендер конкретному виджету. ::widget() вызываем именно на его классе:
+        // базовый Widget::widget() принудительно выставляет class = get_called_class(), поэтому
+        // вызов на нужном классе даёт нужный тип (а не yii\base\Widget). Задавать $config['class']
+        // бессмысленно — он всё равно будет перезаписан.
+        $widgetClass = $adapter->widgetClass();
+
+        return $widgetClass::widget($config);
     }
 
     /**
