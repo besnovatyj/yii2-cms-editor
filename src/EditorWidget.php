@@ -55,6 +55,8 @@ class EditorWidget extends InputWidget
     public ?string $fmDefaultPath = null;
     /** @see EditorOptions::$enableFileManager */
     public ?bool $enableFileManager = null;
+    /** @see EditorOptions::$enableSnippets */
+    public ?bool $enableSnippets = null;
 
     /**
      * Явное переопределение движка в обход настройки (id из карты адаптеров).
@@ -88,6 +90,7 @@ class EditorWidget extends InputWidget
             placeholder: $this->placeholder,
             fmDefaultPath: $this->fmDefaultPath,
             enableFileManager: $this->enableFileManager,
+            enableSnippets: $this->enableSnippets,
         );
 
         // Конфиг адаптера + сырые переопределения активного движка.

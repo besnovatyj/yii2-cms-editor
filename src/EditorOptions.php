@@ -28,6 +28,8 @@ final readonly class EditorOptions
         public ?string $fmDefaultPath = null,
         /** Включать ли интеграцию файлового менеджера. */
         public ?bool $enableFileManager = null,
+        /** Включать ли интеграцию пикера сниппетов. */
+        public ?bool $enableSnippets = null,
     ) {
     }
 }
