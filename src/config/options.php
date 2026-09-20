@@ -10,7 +10,7 @@
 return [
     'editor_engine' => [
         'path'        => 'modules.Editor.params.engine',
-        'label'       => '[Editor] Активный WYSIWYG-редактор',
+        'label'       => 'Активный WYSIWYG-редактор',
         'description' => "Yii::\$app->getModule('Editor')->params['engine']",
         'category'    => 'Editor',
         'rules'       => [
