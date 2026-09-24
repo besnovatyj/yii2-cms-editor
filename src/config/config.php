@@ -22,14 +22,13 @@ return [
          * Карта «движок => FQCN адаптера».
          *
          * Классы указаны строками намеренно: адаптеры живут в пакетах самих редакторов
-         * (Jodit — в yii2-cms-jodit, CKEditor5 — в yii2-cms-file рядом с «батарейной» обёрткой).
+         * (Jodit — в yii2-cms-jodit).
          * Пока пакет редактора не установлен, строка безвредна (автозагрузку не триггерит),
          * а фасад проверяет class_exists перед инстанцированием. Добавить свой редактор =
          * дописать сюда строку и поставить пакет с адаптером — формы модулей не трогаются.
          */
         'adapters' => [
-            'jodit'     => 'Besnovatyj\\Jodit\\adapters\\JoditEditorAdapter',
-            'ckeditor5' => 'Besnovatyj\\File\\adapters\\CkeditorEditorAdapter',
+            'jodit' => 'Besnovatyj\\Jodit\\adapters\\JoditEditorAdapter',
         ],
 
         'directories' => false,

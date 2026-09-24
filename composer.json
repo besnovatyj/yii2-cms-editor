@@ -1,6 +1,6 @@
 {
   "name": "besnovatyj/yii2-cms-editor",
-  "description": "Фасад выбора WYSIWYG-редактора для Yii2 CMS: единый виджет-прослойка EditorWidget + контракт адаптеров. Конкретный движок (Jodit, CKEditor5, ...) переключается через модуль настроек, без правки форм модулей.",
+  "description": "Фасад выбора WYSIWYG-редактора для Yii2 CMS: единый виджет-прослойка EditorWidget + контракт адаптеров. Конкретный движок (Jodit, ...) переключается через модуль настроек, без правки форм модулей.",
   "type": "yii2-extension",
   "license": "MIT",
   "authors": [
@@ -24,8 +24,7 @@
     "editor",
     "wysiwyg",
     "widget",
-    "jodit",
-    "ckeditor"
+    "jodit"
   ],
   "config": {
     "sort-packages": true,

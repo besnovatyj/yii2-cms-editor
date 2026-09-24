@@ -31,7 +31,7 @@ use yii\helpers\ArrayHelper;
  *     'height' => 500,
  *     'fmDefaultPath' => '/static/origin/Blog/' . $post->id,
  *     // сырые переопределения конкретного движка (применится только активный ключ):
- *     'engineConfig' => ['ckeditor5' => ['toolbar' => [...]]],
+ *     'engineConfig' => ['jodit' => ['buttons' => [...]]],
  * ]);
  * ```
  */
@@ -67,7 +67,7 @@ class EditorWidget extends InputWidget
 
     /**
      * Escape hatch: сырые, специфичные для движка переопределения конфига,
-     * ключёванные по id движка — ['jodit' => [...], 'ckeditor5' => [...]].
+     * ключёванные по id движка — ['jodit' => [...], '<другой движок>' => [...]].
      * Применяется только секция активного движка (поверх результата адаптера).
      * @var array<string, array<string, mixed>>
      */

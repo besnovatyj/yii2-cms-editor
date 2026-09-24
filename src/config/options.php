@@ -15,13 +15,12 @@ return [
         'category'    => 'Editor',
         'rules'       => [
             ['required'],
-            ['in', 'range' => ['jodit', 'ckeditor5']],
+            ['in', 'range' => ['jodit']],
         ],
         'inputOptions' => [
             'type'  => 'dropdown',
             'items' => [
-                'jodit'     => 'Jodit',
-                'ckeditor5' => 'CKEditor 5',
+                'jodit' => 'Jodit',
             ],
         ],
     ],
